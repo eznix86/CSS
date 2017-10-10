@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exemple</title>
+
+		<style>
+			.pos{
+				position:absolute;
+				top:50%;
+				left:50%;
+			}
+			#a,#b,#c,#d,#e,#f{
+				height:5px;
+				width:5px;
+				background-color:#494a4c;
+				border-radius: 50%;
+				margin: 1.5px;
+				float: left;
+				
+		
+			}
+			body{ background-color:#eee;}
+			#a,#b,#c,#d,#e,#f{
+				position:absolute;
+				animation-name:rotate;
+				animation-duration: 2s;
+				 transition-timing-function: ease-in-out;
+				  animation-iteration-count: infinite;
+ 				
+			}
+			@keyframes move{
+
+				0%{left:0%;}
+				
+				99%{left:100%;}
+				100%{left:0%;}
+				
+			}
+			
+			@keyframes rotate {
+			from {
+				transform: rotate(0deg)
+		           	translate(20px)
+		           	rotate(0deg);
+				}
+			to {
+				transform: rotate(360deg)
+		           	translate(20px) 
+		           	rotate(-360deg);
+				}
+			}
+		
+
+			#b{ animation-delay: 0.5s;}
+			#c{ animation-delay: 0.1s;}
+			#d{ animation-delay: 0.2s;}
+			#e{ animation-delay: 0.3s;}
+			#f{ animation-delay: 0.4s;}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class='pos'>
+		<div id='a'></div>
+		<div id='b'></div>
+		<div id='c'></div>
+		<div id='d'></div>
+		<div id='e'></div>
+		<div id='f'></div>
+		</div>
+	</body>
+</html>
